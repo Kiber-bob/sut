@@ -12,6 +12,7 @@ public class MobileBankApiTestV2 {
         // Предусловия
         given()
                 .baseUri("http://localhost:9999/api/v1")
+                .header("Content-Type", "application/json; charset=UTF-8")
                 // Выполняемые действия
                 .when()
                 .get("/demo/accounts")
