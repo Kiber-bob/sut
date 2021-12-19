@@ -12,14 +12,14 @@ public class MobileBankApiTestV7 {
 // Предусловия
         given()
                 .baseUri("https://postman-echo.com")
-                .body("MobileBankApiTestV7") // отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body("shouldSendARequest") // отправляемые данные (заголовки и query можно выставлять аналогично)
 // Выполняемые действия
                 .when()
                 .post("/post")
 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("MobileBankApiTestV7"))
+                .body("data", equalTo("shouldSendARequest"))
         ;
     }
 }
